@@ -58,7 +58,7 @@ namespace Discount.Grpc.Extensions
                 }
                 catch (NpgsqlException ex)
                 {
-                    logger.LogInformation(ex, "An error occurred while migration the postresql database");
+                    logger.LogError(ex, "An error occurred while migration the postresql database");
 
                     if(retryForAvailability < 50)
                     {
